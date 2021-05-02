@@ -1,5 +1,8 @@
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/5983943/116801020-7ce76a80-aadc-11eb-9128-92cc1f4d00fe.png" width="200px" align="center" />
+  <img src="https://user-images.githubusercontent.com/5983943/116801020-7ce76a80-aadc-11eb-9128-92cc1f4d00fe.png" width="100px" align="center" />
+</p>
+<p align="center">
+  <a href="https://csilva2810.github.io/">Hi, I'm Carlos!</a>
 </p>
 
 ```javascript
@@ -9,12 +12,14 @@ const person = {
   country: 'Brazil',
   technologies: 'Javascript, and React',
   hobbies: 'playing video games 🎮, exercising 🏃‍♂️, playing soccer ⚽️, playing the guitar 🎸',
+  personalSite: 'https://csilva2810.github.io/'
 }
 
 const introduce = ({ name, jobTitle, country, technologies, hobbies }) => `
   Hello, my name is ${name}. I'm a ${jobTitle} in ${country}.
   I love building things using ${technologies}.
   My hobbies are ${hobbies}.
+  You can visit my personal site at: ${personalSite}
   Nice to meet you!
 `
 
