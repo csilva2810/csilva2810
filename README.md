@@ -3,18 +3,10 @@
 </p>
 
 ```javascript
-const listWords = (words = []) => {
-  const lastIndex = words.length - 1
-  const lastWord = words[lastIndex]
-  const firstWords = words.slice(0, lastIndex)
-
-  return `${firstWords.join(', ')}, and ${lastWord}`
-}
-
 const introduce = ({ name, jobTitle, country, technologies, hobbies }) => `
   Hello, my name is ${name}. I'm a ${jobTitle} in ${country}.
-  I love building things using ${listWords(technologies)}.
-  My hobbies are ${listWords(hobbies)}.
+  I love building things using ${technologies}.
+  My hobbies are ${hobbies}.
   Nice to meet you!
 `
 
@@ -23,8 +15,8 @@ console.log(
     name: 'Carlos',
     jobTitle: 'Front-end Engineer',
     country: 'Brazil',
-    technologies: ['Javascript', 'React'],
-    hobbies: ['playing video games 🎮', 'exercising 🏃‍♂️', 'playing soccer ⚽️', 'playing the guitar 🎸'],
+    technologies: 'Javascript, and React',
+    hobbies: 'playing video games 🎮, exercising 🏃‍♂️, playing soccer ⚽️, playing the guitar 🎸',
   })
 )
 ```
