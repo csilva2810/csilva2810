@@ -1,4 +1,33 @@
-### Hi there 👋
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/5983943/116801020-7ce76a80-aadc-11eb-9128-92cc1f4d00fe.png" width="200px" align="center" />
+</p>
+
+```javascript
+const listWords = (words = []) => {
+  const lastIndex = words.length - 1
+  const lastWord = words[lastIndex]
+  const firstWords = words.slice(0, lastIndex)
+
+  return `${firstWords.join(', ')}, and ${lastWord}`
+}
+
+const introduce = ({ name, jobTitle, country, technologies, hobbies }) => `
+  Hello, my name is ${name}. I'm a ${jobTitle} in ${country}.
+  I love building things using ${listWords(technologies)}.
+  My hobbies are ${listWords(hobbies)}.
+  Nice to meet you!
+`
+
+console.log(
+  introduce({
+    name: 'Carlos',
+    jobTitle: 'Front-end Engineer',
+    country: 'Brazil',
+    technologies: ['Javascript', 'React'],
+    hobbies: ['playing video games 🎮', 'exercising 🏃‍♂️', 'playing soccer ⚽️', 'playing the guitar 🎸'],
+  })
+)
+```
 
 <!--
 **csilva2810/csilva2810** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
