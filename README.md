@@ -3,6 +3,14 @@
 </p>
 
 ```javascript
+const person = {
+  name: 'Carlos',
+  jobTitle: 'Front-end Engineer',
+  country: 'Brazil',
+  technologies: 'Javascript, and React',
+  hobbies: 'playing video games 🎮, exercising 🏃‍♂️, playing soccer ⚽️, playing the guitar 🎸',
+}
+
 const introduce = ({ name, jobTitle, country, technologies, hobbies }) => `
   Hello, my name is ${name}. I'm a ${jobTitle} in ${country}.
   I love building things using ${technologies}.
@@ -10,15 +18,7 @@ const introduce = ({ name, jobTitle, country, technologies, hobbies }) => `
   Nice to meet you!
 `
 
-console.log(
-  introduce({
-    name: 'Carlos',
-    jobTitle: 'Front-end Engineer',
-    country: 'Brazil',
-    technologies: 'Javascript, and React',
-    hobbies: 'playing video games 🎮, exercising 🏃‍♂️, playing soccer ⚽️, playing the guitar 🎸',
-  })
-)
+introduce(person)
 ```
 
 <!--
