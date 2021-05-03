@@ -8,7 +8,6 @@
 ```javascript
 import React from 'react'
 import ReactDOM from 'react-dom'
-const root = document.getElementById('root');
 
 const Person = ({ name, jobTitle, country, technologies, hobbies }) => (
   <p>
@@ -21,7 +20,6 @@ const Person = ({ name, jobTitle, country, technologies, hobbies }) => (
 )
 
 ReactDOM.render(
-  root,
   <Person
     name='Carlos'
     jobTitle='Front-end Engineer'
@@ -29,7 +27,8 @@ ReactDOM.render(
     technologies='Javascript, and React'
     hobbies='playing video games 🎮, exercising 🏃‍♂️, playing soccer ⚽️, and playing the guitar 🎸'
     personalSite='https://csilva2810.github.io/'
-  />
+  />,
+  document.getElementById('root')
 )
 ```
 
