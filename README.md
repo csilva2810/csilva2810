@@ -6,24 +6,31 @@
 </p>
 
 ```javascript
-const person = {
-  name: 'Carlos',
-  jobTitle: 'Front-end Engineer',
-  country: 'Brazil',
-  technologies: 'Javascript, and React',
-  hobbies: 'playing video games 🎮, exercising 🏃‍♂️, playing soccer ⚽️, playing the guitar 🎸',
-  personalSite: 'https://csilva2810.github.io/'
-}
+import React from 'react'
+import ReactDOM from 'react-dom'
+const root = document.getElementById('root');
 
-const introduce = ({ name, jobTitle, country, technologies, hobbies }) => `
-  Hello, my name is ${name}. I'm a ${jobTitle} in ${country}.
-  I love building things using ${technologies}.
-  My hobbies are ${hobbies}.
-  You can visit my personal site at: ${personalSite}
-  Nice to meet you!
-`
+const Person = ({ name, jobTitle, country, technologies, hobbies }) => (
+  <p>
+    Hello, my name is {name}. I'm a {jobTitle} in ${country}. <br />
+    I love building things using {technologies}. <br />
+    My hobbies are {hobbies}. <br />
+    You can visit my personal site at: {personalSite} <br />
+    Nice to meet you!
+  </p>
+)
 
-introduce(person)
+ReactDOM.render(
+  root,
+  <Person
+    name='Carlos'
+    jobTitle='Front-end Engineer'
+    country='Brazil'
+    technologies='Javascript, and React'
+    hobbies='playing video games 🎮, exercising 🏃‍♂️, playing soccer ⚽️, and playing the guitar 🎸'
+    personalSite='https://csilva2810.github.io/'
+  />
+)
 ```
 
 <!--
