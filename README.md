@@ -9,21 +9,28 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-const Person = ({ name, jobTitle, country, technologies, hobbies }) => (
-  <p>
-    Hello, my name is {name}. I'm a {jobTitle} in ${country}. <br />
-    I love building things using {technologies}. <br />
-    My hobbies are {hobbies}. <br />
-    You can visit my personal site at: {personalSite} <br />
-    Nice to meet you!
-  </p>
+const Person = ({ name, jobTitle, country, technologies, hobbies, personalSite }) => (
+  <main>
+    <p>
+      Hello, my name is {name}. I'm a {jobTitle} from {country}.
+    </p>
+    <p>
+      I love building things using {technologies}.
+    </p>
+    <p>My hobbies are:</p>
+    <ul>
+      {hobbies.split(',').map(hobby => <li key={hobby}>{hobby}</li>)}
+    </ul>
+    <p>You can visit my personal site at: {personalSite}</p>
+    <p>Nice to meet you! 😉</p>
+  </main>
 )
 
 ReactDOM.render(
   <Person
     name='Carlos'
     jobTitle='Front-end Engineer'
-    country='Brazil'
+    location='🏢 São Paulo - Brazil'
     technologies='Javascript, and React'
     hobbies='playing video games 🎮, exercising 🏃‍♂️, playing soccer ⚽️, and playing the guitar 🎸'
     personalSite='https://csilva2810.github.io/'
